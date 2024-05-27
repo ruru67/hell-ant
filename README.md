@@ -6,7 +6,7 @@ C'est le nom du projet et aussi le surnom d'une fourmi primitive datant d'enviro
 Le projet
 
 Un projet ambitieux, voire dément, débuté en mars 2024 et certainement bientôt open-source. Un wip qui risque de durer pas mal de temps...
-*** Voilà les objectifs en bref : ***
+** Voilà les objectifs en bref : **
     simuler l'activité de plusieurs dizaines, centaines et dizaines de milliers d'individus plus ou moins autonomes et interagissant
     simuler le cycle de vie d'une colonie
     simuler l'évolution des fourmis, au fil de générations, en partant de fourmis primitives d'il y a 120 millions d'années
