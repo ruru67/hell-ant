@@ -20,9 +20,10 @@ Les modèles 3D et animations seront créées avec le logiciel Blender 3.6 essen
 
 ## Sanboxes / Bacs-à-sable
 En accès libre : pour tester sans aucune installation requise. Visitez les fonctionnalités qui sont ajoutées au fur et à mesure du développement
+
 **Les commandes** : Touches 1 à 5 pour changer de caméra. Click sur une fourmi ou une categorie de fourmi pour sélectionner et voir le menu correspondant
 [https://ruru.alwaysdata.net]
-[https://ruru.alwaysdata.net/images/sandbox001.png]
+![https://ruru.alwaysdata.net/images/sandbox001.png]
 
 
 ## Youtube
