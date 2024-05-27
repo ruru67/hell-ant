@@ -1,0 +1,297 @@
+body { 
+    margin: 0; 
+    background-color: black;
+}
+.ul-nice{
+    padding: 0 0.75em 0;
+    width: 85%;
+}
+.home{
+    display: flex;
+    
+    flex-flow: column;
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
+    background-color: #0c0806;
+    color: floralwhite;
+    padding: .25em;
+    text-align: center;
+
+}
+h1{
+    font-family: "Trebuchet MS",Tahoma, Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(0deg,#000,#f00,#ff8024,#f9fbbd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+h3{
+    
+    margin: 1rem 0 0 0;
+}
+.pointer-events-none{
+    pointer-events: none;
+}
+.d-none{
+    display: none !important;
+}
+.d-flex{
+    display: flex !important;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.justify-content-evenly{
+    justify-content:space-evenly;
+}
+.justify-content-around{
+    justify-content: space-around;
+}
+.align-items-center{
+    align-items:center;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+.margin-0{
+    margin:0;
+}
+.margin-1{
+    margin:0.25rem;
+}
+.mx-auto{
+    margin-left:auto;
+    margin-right: auto;
+}
+.mx-3{
+    margin-left:0.75rem;
+    margin-right: 0.75rem;
+}
+.p-0{
+    padding: 0;
+}
+.padding-x-1{
+    padding: 0 0.25rem;
+}
+.border-1{
+    border:1px solid
+}
+.bg-floral{
+    background-color:floralwhite;
+}
+div.selected{
+    color:green
+}
+.text-align-center{
+    text-align: center;
+}
+.text-center{
+    justify-content: center;
+}
+.fs-small{
+    font-size: small;
+}
+.fs-medium{
+    font-size: medium;
+}
+.bold{
+    font-weight: bold;
+}
+.img-float-left{
+    float: left;
+    margin: 5px 10px 10px 5px;
+    padding: 0px 20px 5px 0px;
+}
+.img-float-right{
+    float: right;
+    margin: 5px 5px 10px 10px;
+    padding: 0px 0px 5px 20px;
+}
+
+.legend{
+    font-style: italic;
+    font-size: small;
+}
+.legend-sandbox{
+    width: 320px;
+    font-size: large;
+    font-weight: bold;
+    background-color: #fffaf0a6;
+    border-radius: 0px 0px 3px 3px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+/*SPLASH-SCREEN*/
+.splash-screen{
+    /* background-color:#1e1413; */
+    background: radial-gradient(farthest-side,white,#404040,#1e1413, #000);
+    color:floralwhite;
+    position: fixed;
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.splash-screen>*{
+    pointer-events: none;
+}
+
+.splash-game-description{
+    font-size: large;
+    width: 66%;
+    margin: 0;
+}
+
+.blink{
+    animation: blink 2s ease-out infinite;
+}
+@keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    45% {
+      opacity: .5;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+.img-messor{
+    content: url("../sandbox/antSpecies/messor/messor_50pc 2.png");
+    border-radius: 86px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+/*GAME*/
+
+.headpanel-game{
+    position: fixed;
+    margin:.25rem;
+    background-color:floralwhite;
+}
+.game-panel{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    align-items: end;
+    display: flex;
+    height:0;
+}
+.panel-transport{
+    display: flex;
+    align-items: center;
+    /* background-color: floralwhite; */
+    padding: 1px;
+    margin: .25rem;
+}
+.panel-transport-container,
+.panel-player{
+    margin:.25rem;
+    padding: .25rem;
+    display: flex;
+}
+.panel-player-container{
+    padding: .25rem;
+    display: flex;
+    height: 0;
+    /* flex-direction: column; */
+}
+
+.panel-player-colony{
+    display: flex;
+    flex-direction: column;
+    padding-left:0.25rem;
+    padding-right : 0.25rem;
+    background-color: floralwhite;
+    justify-content: end;/* align-items: end; */
+
+}
+
+.div-player-colonies,
+.div-ants-action{
+    display:flex;
+    align-items: end;
+}
+
+.div-colony-role{
+    min-width:64px;
+    margin: 0.25rem 0 0 0.25rem;
+}
+.div-colony-role-head{
+    padding: .25rem;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 1rem;
+    background-color: #e0e1e1;
+
+}
+.div-colony-role-actions{
+    display: flex;
+    flex-direction: column;
+}
+/* .ul-ants-by-role{
+    margin:0;
+    list-style-type :none;
+    padding: 0;
+} */
+.bt{
+    border: 1px solid gray;
+    padding: .25rem;
+    margin: .05rem;
+    border-radius: 3px;
+}
+
+.bt:hover{
+    background-color: rgb(221, 221, 221);
+}
+.bt.selected{
+    /* background-color: green; */
+    background-color: #edf2ed69;
+    /* color:antiquewhite; */
+}
+
+.bt-game-transport{
+    background-color: #80808054;
+}
+
+.bt-action{
+    
+    position: absolute;
+    z-index: 200;
+    background:radial-gradient(farthest-side, rgb(221, 221, 221),rgba(221, 221, 221, 0.699),#80808054,#80808000);
+    
+    transition:  0.2s;
+    font-size: large;
+    border:none;
+    /* display: flex;
+    align-items: center; */
+    
+}
+.bt-action:hover{
+    background:radial-gradient(farthest-side,  rgb(221, 221, 221),rgba(221, 221, 221, 0));
+    transform: scale(1.2)
+}
+.bt-action:active{
+    transform: scale(.9)
+}

@@ -1,0 +1,91 @@
+<%- include('./shared/header.ejs')  %>
+
+<script>
+    const IS_MOBILE=[
+            /Android/i,
+            /webOS/i,
+            /iPhone/i,
+            /iPad/i,
+            /iPod/i,
+            /BlackBerry/i,
+            /Windows Phone/i
+        ].some((toMatchItem) => {
+            return navigator.userAgent.match(toMatchItem);
+        });
+</script>
+<div class="home">
+    <div class="d-flex justify-content-evenly align-items-center flex-wrap my-1" style="text-align: justify;">
+        <section class="d-flex flex-column my-1 w-100 ">
+            <h1 class="mx-auto">Hell Ant - Simulation de fourmis</h1>
+            <div class="m-3">
+                <figure class="d-flex flex-column img-float-right" style="width:250px">
+                    <img width='240' height='239' alt="Fourmi hell Ant"
+                        src='images/hellant_fossile.png' />
+                    <figcaption class="legend" style="width:240px">
+                        Source: PBS Eons
+                    </figcaption>
+                </figure>
+                <div>
+                    <h3>Hell Ant ? </h3>
+                    <p>La fourmi de l'enfer!</p>
+                    <p>C'est le nom du projet et aussi le surnom d'une fourmi primitive datant d'environ 100 Ma dont on a retrouvé des specimens fossilisés dans l'ambre (cf photo à droite). Elle est aussi appelée fourmi-licorne, Ceratomyrmex ellenbergeri ou fourmi à corne d'Ellenberger.</p>
+                </div>
+                <div>
+                    <h3>Le projet</h3>
+                    <p>Un projet ambitieux, voire dément, débuté en mars 2024 et certainement bientôt open-source. Un wip qui risque de durer pas mal de temps...<br/>
+                        Voilà les <u>objectifs</u> en bref : </p>
+                    <ul  class="ul-nice">
+                        <li>simuler l'activité de plusieurs dizaines, centaines et dizaines de milliers d'individus plus ou moins autonomes et interagissant</li>
+                        <li>simuler le cycle de vie d'une colonie</li>
+                        <li>simuler l'évolution des fourmis, au fil de générations, en partant de fourmis primitives d'il y a 120 millions d'années</li>
+                    </ul>
+                        <p>Ce projet sera développé en <code>javascript/NodeJS</code> avec <code>Three.js</code> pour l'affichage 3D dans le navigateur</p>
+                    <p>Les modèles 3D et animations seront créées avec le logiciel <code>Blender 3.6</code> essentiellement mais aussi issus de sources libres (Mixamo,...)</p>
+                </div>
+                <div>
+                    <h3>Les bacs à sables</h3>
+                    <p>
+                        En accès libre : testez ! Aucune installation requise. Visitez les fonctionnalités qui sont ajoutées au fur et à mesure du développement:
+                    </p>
+                    <% if(locals.sandboxes) { %>
+                        <ul style="list-style-type: none;" class="d-flex justify-content-around p-0">
+                            <% sandboxes.forEach(sandbox => {%>
+                                <li>
+                                    <a href="bac-a-sable?sb=<%- sandbox.tag %>">
+                                        <figure class="d-flex flex-column" style="width:330px">
+                                            <img width='320' height='210' alt="<%- sandbox.name %>"
+                                                src='<%- sandbox.image_path %>' style="border-radius: 3px 3px 0px 0px;"/>
+                                            <figcaption class="legend-sandbox">
+                                                <%- sandbox.name %><br/><%- sandbox.pitch %>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    <% } %>
+                    <p>(Les bacs à sable ne fonctionnent pas sur téléphone)</p>
+                </div>
+                <div>
+                    <h3>A venir</h3>
+                    <ul class="ul-nice">
+                        <li>un forum pour discuter/échanger/débugguer...</li>
+                        <li>un github pour partager les ressources du projet et permettre la participation au développement</li>
+                        <li>Un blog pour suivre l'évolution du projet pas à pas : modélisation 3D, développement web</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="m-3">
+        <div>
+            <h3>
+            <ul style="list-style-type: none;" class="d-flex justify-content-around ul-nice">
+                <li><a href='https://www.youtube.com/channel/UCkxofwuujMNNp4r8glNU6mg' target="_blank">Chaine Youtube</a></li>
+                <li><a href='https://discord.gg/dz8g3NbXsQ' target="_blank">Chaine Discord</a></li>
+            </ul></h3>
+        </div>
+    </div>
+</div>
+
+<%- include('./shared/footer.ejs')  %>

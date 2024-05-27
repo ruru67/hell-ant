@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>HELL ANT</title>
+		<!-- 
+					"simplex-noise": "./public_html/hellant/sandbox/simplex-noise/simplex-noise.js" -->
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "../assets/three@v0.163.0/build/three.module.js",
+					"three/addons/": "https://unpkg.com/three@0.163.0/examples/jsm/"
+				}
+			}
+		</script>
+		<script type="text/javascript" src="../assets/dat.gui-master/build/dat.gui.min.js"></script>
+		<link href="../styles/style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body style="background-color: black;">
+		<div class="headpanel-game" id="div-game">
+		</div>
+		<div class="panel-clock" id="div-clock">
+		</div>
+		<div class="splash-screen d-none" id="div-splash">
+			<h1>Hell Ant</h1>
+			<img class="img-messor" width="802" height="456"/>
+			<h2 id="splash-game-name">...</h2>
+			<p id="splash-game-description" class="splash-game-description"></p>
+			<p id="splash-game-state" class="blink">Chargement en cours...</p>
+		</div>
+		<script>console.log("test")</script>
+		<% if(locals.sandbox) { %>
+			
+			
+			<script>
+				import("/<%-sandbox.class_path%>").then((module) => {
+					let sandbox = new module["<%-sandbox.class_name%>"]//routes[params.get("sb")]
+					// let sandbox=new SandBox001();
+					sandbox.start()
+				})
+			</script> 
+			<!-- console.log(sandbox)
+			import("./"+sandbox.class_path).then((module) => {
+				let sandbox = new module[sandbox.class_name]//routes[params.get("sb")]
+				// let sandbox=new SandBox001();
+				sandbox.start()
+			}) -->
+		<% } %>
+		<!-- <script type="module" src="sandbox/main.js"></script> -->
+	</body>
+    <script>
+        const $log=document.getElementById("log");
+    </script>
+
+    <template id="tpl-player">
+		<div class="panel-player column" id="div-player">
+		</div>
+    </template>
+
+    <template id="tpl-colonie">
+		<div class="panel-player-container">
+			<div class="div-player-colonies">
+				<div class="panel-player-colony">
+					<h4 style="margin:.25rem 0;"><input class="colony-name"/></h4>
+					<div class="div-colony-population">
+						<span>Population : <label id="lblColoNbFourmis"></label></span>
+					</div>
+					
+					<div style="display:grid;">
+						<span>Espèce : <label id="lblColoEspece" style="font-style: italic;"></label></span>
+						<span>Genre : <label id="lblColoGenre" style="font-style: italic;"></label></span>
+						<span>Sous-famille : <label id="lblColoSousFamille" style="font-style: italic;"></label></span>
+					</div>
+				</div>
+			</div>
+			<div class="div-ants-action">
+
+			</div>
+		</div>
+    </template>
+
+    <template id="tpl-selections">
+        <div class="panel-player-container player-selection">
+            <table>
+                
+            </table>
+        </div>
+    </template>
+	<template id="tpl-actions">
+        <div class="panel-player-container player-actions">
+            
+        </div>
+    </template>
+
+	<template id="tpl-transport">
+        <div class="panel-transport-container column">
+			<div class="panel-transport">
+				<button class="bt bt-game-transport game-stop" value="Stop">◼</button>
+				<button class="bt bt-game-transport game-play selected" value="Play">▶</button>
+				<button class="bt bt-game-transport game-forward" value="Forward">▶▶</button>
+				<div class="game-speed d-flex">
+					<button class="bt bt-game-transport bold">x2</button>
+					<div class="game-speeds fs-small d-none"> 
+
+					</div>
+				</div>
+			</div>
+			
+        </div>
+    </template>
+
+	<template id="tpl-events">
+        <div class="panel-events-container column">
+
+		</div>
+	</template>
+</html>
