@@ -23,7 +23,7 @@ En accès libre : pour tester sans aucune installation requise les fonctionnalit
 
 **Les commandes** : Touches 1 à 5 pour changer de caméra. Click sur une fourmi ou une categorie de fourmi pour sélectionner et voir le menu correspondant
 [https://ruru.alwaysdata.net](https://ruru.alwaysdata.net)
-![Image](https://ruru.alwaysdata.net/images/sandbox001.png "icon")
+[![Image](https://ruru.alwaysdata.net/images/sandbox001.png)]
 
 
 ## Youtube
